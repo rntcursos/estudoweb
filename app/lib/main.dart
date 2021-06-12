@@ -1,7 +1,13 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
+  FirebaseFirestore.instance.collection("users").doc("msn").set({
+    'Renato:': 'Quer cafê?',
+    'Marcelo': 'Fala mano.',
+    'Marcelo1': 'Sempre!!!',
+  });
 }
 
 class MyApp extends StatelessWidget {
